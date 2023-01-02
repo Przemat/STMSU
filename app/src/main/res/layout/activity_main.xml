@@ -2,175 +2,190 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/get_map"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/responde"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#C1C1C1"
+        android:background="#3F51B5"
+        android:stretchColumns="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="#2196F3"
-            android:baselineAligned="false"
-            android:gravity="center"
             android:textAlignment="center">
 
             <TextView
-                android:id="@+id/start_point"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-black"
-                android:text="Left-Up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/up_left"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/str_latitude"
-                android:layout_width="88dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
-                android:text="Latitude" />
-
-            <EditText
-                android:id="@+id/str_latitude_number"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:text="53.12890"
-                android:textAlignment="viewStart" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
-
-            <TextView
-                android:id="@+id/str_longitude"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="Longitude" />
-
-            <EditText
-                android:id="@+id/str_longitude_number"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:text="17.98786"
-                android:textAlignment="viewStart" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:textAlignment="center">
-
-            <TextView
-                android:id="@+id/end_point"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-black"
-                android:text="Right-Bottom"
-                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="@string/latitude"
                 android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/up_lat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:text="@string/min_lat" />
+
+            <Button
+                android:id="@+id/btn_min_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/min" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/longitude"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/left_lon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:text="@string/min_lon" />
+
+            <Button
+                android:id="@+id/btn_min_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/min" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#2196F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/down_right"
+                android:textAlignment="center"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/end_latitude"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
-                android:text="Latitude" />
+                android:layout_weight="1"
+                android:text="@string/latitude"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/end_latitude_number"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:id="@+id/down_lat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                android:text="53.11604"
-                android:textAlignment="viewStart" />
+                android:minHeight="48dp"
+                android:text="@string/max_lat" />
+
+            <Button
+                android:id="@+id/btn_max_down"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/max" />
         </TableRow>
 
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/end_longitude"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="Longitude" />
+                android:layout_weight="1"
+                android:text="@string/longitude"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/end_longitude_number"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:id="@+id/right_lon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                android:text="18.00929"
-                android:textAlignment="viewStart" />
+                android:minHeight="48dp"
+                android:text="@string/max_lon" />
+
+            <Button
+                android:id="@+id/btn_max_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/max" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </TableLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bdg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

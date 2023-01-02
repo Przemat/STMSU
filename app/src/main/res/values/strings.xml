@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">STMSU</string>
+    <string name="longitude">LONGITUDE</string>
+    <string name="max">MAX</string>
+    <string name="latitude">LATITUDE</string>
+    <string name="down_right">DOWN-RIGHT</string>
+    <string name="min">MIN</string>
+    <string name="up_left">UP-LEFT</string>
+    <string name="max_lon">18.00929</string>
+    <string name="max_lat">53.11604</string>
+    <string name="min_lon">17.98786</string>
+    <string name="min_lat">53.12890</string>
+    <string name="get_map">GET MAP</string>
 </resources>
